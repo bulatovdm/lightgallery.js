@@ -1295,6 +1295,13 @@ Plugin.prototype.closeGallery = function() {
         _this.destroy();
     });
 
+    // Closing gallery by tapping on black space
+    _lgUtils2.default.on(_this.outer, 'touchstart', function (e) {							
+        if (_lgUtils2.default.hasClass(e.target, 'lg-img-wrap')) {
+            _this.destroy();
+        }												
+    });
+
     if (_this.s.closable) {
 
         // If you drag the slide and release outside gallery gets close on chrome
