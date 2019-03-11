@@ -124,6 +124,10 @@
             var _x;
             var _y;
 
+            if (image === null) {
+              return;
+            }
+
             // Find offset manually to avoid issue after zoom
             var offsetX = (window.innerWidth - image.clientWidth) / 2;
             var offsetY = (window.innerHeight - image.clientHeight) / 2 + (document.documentElement.scrollTop || document.body.scrollTop);
